@@ -9,7 +9,7 @@ syn keyword kkeyword cleanup timeout sleep say
 syn keyword kkeyword doc doc0 doc1 doc2 doc3 doc4 doc5
 syn keyword kkeyword loop endloop
 syn keyword kkeyword macro endmacro
-syn keyword kkeyword invoke
+syn keyword kkeyword invoke progress
 syn keyword kkeyword shell endshell
 
 syn keyword kmetacmd my local global config include
