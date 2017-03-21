@@ -15,10 +15,32 @@ syn keyword kkeyword shell endshell
 syn keyword kmetacmd my local global config include
 
 " comments
-syn region rcomment start='#' end='$'
+syn keyword luxTodo contained TODO FIXME XXX NOTE
+syn region rcomment start='#' end='$' contains=luxTodo
+
+" strings
+syn region luxString start=+"+ skip=+\\\\\|\\"+ end=+"+
+syn region luxString start=+'+ skip=+\\\\\|\\'+ end=+'+
+
+" numbers
+syn match luxNumber /\<[+-]\=\d\+\>/
+
+" send
+syn match luxSend /[!~]/
+
+" match
+syn region luxMatch start="^\s*?" end="$"
+syn region luxMatch start=+"""?+ end=+"""+
+
+" highlighting
 
 hi def link kkeyword Statement
 hi def link kmetacmd Identifier
 hi def link rcomment Comment
+hi def link luxTodo Todo
+hi def link luxString String
+hi def link luxNumber Number
+hi def link luxSend Statement
+hi def link luxMatch Macro
 
 let b:current_syntax = "lux"
