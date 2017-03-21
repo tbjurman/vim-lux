@@ -1,1 +1,9 @@
+vim-lux
+=======
 Vim syntax for lux files (https://github.com/hawk/lux)
+
+
+License
+=======
+Copyright (c) 2015-2017 vim-lux authors. The vim-lux plugin is distributed
+under the same terms as Vim itself, see :help license.
