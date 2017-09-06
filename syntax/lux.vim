@@ -2,7 +2,7 @@
 " Vim syntax file for lux files
 "
 if exists("b:current_syntax")
-	finish
+    finish
 endif
 
 syn keyword kkeyword cleanup timeout sleep say
@@ -26,11 +26,14 @@ syn region luxString start=+'+ skip=+\\\\\|\\'+ end=+'+
 syn match luxNumber /\<[+-]\=\d\+\>/
 
 " send
-syn match luxSend /[!~]/
+syn region luxSend start="^\s*[!~]" end="$"
 
 " match
 syn region luxMatch start="^\s*?" end="$"
-syn region luxMatch start=+"""?+ end=+"""+
+syn region luxMatch start=+^\s*"""?+ end=+"""+
+
+" slow sync to handle multi line matches
+syn sync minlines=200
 
 " highlighting
 
@@ -40,7 +43,7 @@ hi def link rcomment Comment
 hi def link luxTodo Todo
 hi def link luxString String
 hi def link luxNumber Number
-hi def link luxSend Statement
-hi def link luxMatch Macro
+hi def link luxSend ModeMsg
+hi def link luxMatch Question
 
 let b:current_syntax = "lux"
