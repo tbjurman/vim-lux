@@ -1,0 +1,143 @@
+[doc Top documentation]
+
+[doc0 level0 documentation]
+[doc1 level1 documentation]
+[doc2 level2 documentation]
+[doc3 level3 documentation]
+[doc4 level4 documentation]
+[doc5 level5 documentation]
+
+[my var=1]
+[local var=1]
+[global var="string"]
+[config ENBALE_LOG=1]
+[include test.luxinc]
+[loop]
+[endloop]
+[macro foo]
+[endmacro]
+[invoke foo]
+[shell foo]
+[endshell]
+[cleanup]
+[timeout 5]
+[sleep 10]
+[say "hello, world"]
+[progress testing step 2]
+# normal comment
+# TODO: fix thie
+# FIXME: and this
+# XXX
+# NOTE
+
+[shell test]
+    !single line send "this" and 10
+    ?single line match "that" and 20
+    ~multi line send first line
+    ~multi line send second line
+    !multi line send last line
+    """?
+    multi line regexp match
+    fsd
+    fsd
+    """
+    """??
+    fdsa
+    fdsa
+    """
+    """???
+    fdas
+    fdsa
+    """
+
+    !send that
+    """?
+    m
+    a
+    t
+    c
+    h
+
+    t
+    h
+    f
+    g
+    h
+    j
+    k
+    o
+    i
+    u
+    y
+    t
+    r
+    e
+    w
+    q
+    z
+    x
+    c
+    v
+    b
+    n
+    m
+    i
+    s
+    """
+    # this is a comment
+    ~send that on this line
+    ! and this on the second line
+    """???
+    m
+    a
+    t
+    c
+    h
+
+    t
+    h
+    i
+    s
+    """
+
+    !cdjsklcjdkls
+    ~send that on this line
+    ! and this on the second line
+    """?
+    m
+    a
+    """
+    ~send that on this line
+    ! and this on the second line
+    """?
+    cdjsklcjdkls
+    t
+    c
+    h
+
+    t
+    h
+    i
+    s
+    """
+
+    !cdjsklcjdkls
+    ~send that on this line
+    ! and this on the second line
+    """?
+    m
+    a
+    t
+    c
+    h
+    !kalle
+    ?nisse
+    TODO
+    FIXME
+    t
+    h
+    i
+    s
+    """
+
+    !cdjsklcjdkls
