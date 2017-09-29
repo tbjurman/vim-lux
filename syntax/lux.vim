@@ -33,7 +33,7 @@ syn region luxMatch start="^\s*?" end="$"
 syn region luxMatch start=+^\s*"""?+ end=+"""+
 
 " slow sync to handle multi line matches
-syn sync minlines=200
+syn sync minlines=1000
 
 " highlighting
 
